@@ -1,6 +1,7 @@
 .footer {
-    border-top: dotted 1px $color-secondary2;
+    border-top: dotted 1px $color-secondary;
     text-align: center;
+    background: $gradient-bgd2;
     display: flex;
     flex-direction: column;
     align-items: center;

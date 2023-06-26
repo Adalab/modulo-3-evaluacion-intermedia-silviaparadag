@@ -31,16 +31,18 @@ function App() {
     .filter ( (quote) => quote.quote.toLowerCase().includes(quoteSearch.toLowerCase()))
     .filter( (quote) => {
       if (characterSearch === 'all') {
-        return quote;
-      } else if (characterSearch === quote.character) {
-        return quote;
+        return true;
+        // con true es lo mismo que poner: return quote;
+      } else {
+      //else if (characterSearch === quote.character) {return= quote;}
+        return quote.character === characterSearch;
       } 
     })
     return filteredQuoteList.map((eachQuote, ind) => (
         <li className="quotes__elem" key={ind}>
           <p className="quotes__elem--text">
             {eachQuote.quote} -
-            <p className="quotes__elem--char"> {eachQuote.character}</p>
+          <h3 className="quotes__elem--char"> {eachQuote.character}</h3>
           </p>
         </li>
       ));
@@ -73,6 +75,7 @@ function App() {
       ev.preventDefault();
     };
 
+    // hacer un map de los personajes del array, y con ese nuevo array, habrá que crear los options. un map parecido a los de <li>. Función set de java script
 
   return (
     <div className="App">
@@ -90,7 +93,7 @@ function App() {
                 <label className="search__label" htmlFor="text">
                   Filtar por frase
                   <input
-                    className="input__search"
+                    className="search__input"
                     autoComplete="off"
                     type="search"
                     name="search"
@@ -100,7 +103,7 @@ function App() {
                 </label>
                 <label className="search__label" htmlFor="text">
                 Filtar por personaje
-                <select name="" id="" onChange={handleCharacterSearch} value={characterSearch}>
+                <select className="search__select" name="" id="" onChange={handleCharacterSearch} value={characterSearch}>
                   <option value="all">Todos</option>
                   <option value="Ross">Ross</option>
                   <option value="Monica">Mónica</option>
@@ -122,7 +125,7 @@ function App() {
           <h2 className="addquotes__title">Añade una nueva frase</h2>
           <label className="addquotes__label" htmlFor="text">
             Frase
-            <input
+          <input
               className="addquotes__input"
               type="text"
               name="quote"

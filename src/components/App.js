@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/App.scss';
-//import callToApi from '../services/api';
+import callToApi from '../services/api';
 import logo from '../images/friends_logo_1x.png'
 
 function App() {
@@ -17,11 +17,7 @@ function App() {
 
 
   useEffect ( () => {
-    fetch('https://beta.adalab.es/curso-intensivo-fullstack-recursos/apis/quotes-friends-tv-v1/quotes.json')
-    .then((response) => response.json())
-    .then((dataQuotes) => {
-      setQuoteList(dataQuotes);
-    });
+    callToApi().then((response) => {setQuoteList(response)});
   }, []);
 
 

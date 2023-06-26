@@ -1,0 +1,75 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__search {
+        width: 100vw;
+        background: $gradient-bgd;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    &__addquotes {
+        width: 100vw;
+        padding: 20px;
+        background: $gradient-bgd;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+}
+
+.quotes {
+    background: $gradient-bgd2;
+    padding: 10px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__elem {
+        margin-bottom: 10px;
+        padding: 16px;
+        width: 200px;
+        list-style: none;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        background-color: $color-primary2;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        color: #fff;
+
+        &--text {
+            font-family: $font-secondary;
+            font-style: italic;
+        }
+
+        &--char {
+            font-size: 14px;
+            padding-top: 10px;
+            font-family: $font-secondary4;
+            font-weight: 700;
+            text-align: right;
+        }
+    }
+}
+
+.search {
+    padding: 30px;
+    width: 100%;
+
+    &__label {
+        padding: 15px;
+    }
+}
+
+.addquotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        color: $color-primary2;
+        font-family: $font-secondary3;
+    }
+}

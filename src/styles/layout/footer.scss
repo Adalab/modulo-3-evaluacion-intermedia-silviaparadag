@@ -1,20 +1,30 @@
+@import '../core/variables';
+@import '../core/mixins';
+
 .footer {
-    border-top: dotted 1px $color-secondary;
-    text-align: center;
     background: $gradient-bgd2;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: center;
     height: 80px;
-    padding: 10px;
+    padding: 20px;
+
+    @include Tablet() {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     &__text {
-        padding: 10px 10px 10px;
         color: $color-primary2;
-        font-size: 16px;
+        font-size: .7rem;
         padding: 5px;
         font-family: $font-main;
-        font-weight: 600;
+        font-weight: 400;
+
+        &--link {
+            text-decoration: none;
+            color: $color-primary2;
+        }
     }
+
 }

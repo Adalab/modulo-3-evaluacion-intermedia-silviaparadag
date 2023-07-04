@@ -37,9 +37,9 @@ function App() {
     return filteredQuoteList.map((eachQuote, ind) => (
         <li className="quotes__elem" key={ind}>
           <p className="quotes__elem--text">
-            {eachQuote.quote} -
-          <h3 className="quotes__elem--char"> {eachQuote.character}</h3>
+            {eachQuote.quote}
           </p>
+          <h3 className="quotes__elem--char"> {eachQuote.character}</h3>
         </li>
       ));
     };
@@ -87,18 +87,20 @@ function App() {
           <section className="main__search">
             <form className="search" onSubmit={handleSubmit}>
                 <label className="search__label" htmlFor="text">
-                  Filtar por frase
+                  Search quote
+                  </label>
                   <input
                     className="search__input"
                     autoComplete="off"
                     type="search"
                     name="search"
+                    placeholder='e.g. Unagi'
                     onChange={handleQuoteSearch}
                     value={quoteSearch}
                   />
-                </label>
                 <label className="search__label" htmlFor="text">
-                Filtar por personaje
+                Select character
+                </label>
                 <select className="search__select" name="" id="" onChange={handleCharacterSearch} value={characterSearch}>
                   <option value="all">Todos</option>
                   <option value="Ross">Ross</option>
@@ -108,7 +110,6 @@ function App() {
                   <option value="Chandler">Chandler</option>
                   <option value="Rachel">Rachel</option>
                 </select>
-              </label>
             </form>
           </section>
 
@@ -118,36 +119,36 @@ function App() {
 
           <section className="main__addquotes">
              <form className="addquotes">
-          <h2 className="addquotes__title">Añade una nueva frase</h2>
+          <h2 className="addquotes__title">Add new quote</h2>
           <label className="addquotes__label" htmlFor="text">
-            Frase
+            New quote
+            </label>
           <input
               className="addquotes__input"
               type="text"
               name="quote"
               id="quote"
-              placeholder="La frase de la serie a añadir"
+              placeholder="e.g. Unagi"
               value={newQuote.quote}
               onChange={handleAddQuote}
             />
-          </label>
           <label className="addquotes__label" htmlFor="text">
-            Personaje
+            Character
+            </label>
             <input
               className="addquotes__input"
               type="text"
               name="character"
               id="character"
-              placeholder="Personaje que la ha dicho"
+              placeholder="The character who said it"
               value={newQuote.character}
               onChange={handleAddQuote}
             />
-          </label>
 
           <input
             className="addquotes__btn"
             type="submit"
-            value="Añadir nueva frase"
+            value="Add"
             onClick={handleClickAddQuote}
           />
         </form>
@@ -155,7 +156,8 @@ function App() {
 
         </main>
         <footer className='footer'>
-          <p className="footer__text">Adalab 2023 © Trótula promotion</p>
+          <span className="footer__text"> ©  <a href="https://adalab.es/bootcamp-programacion/" target="_blank" rel="noreferrer" className="footer__text--link">Adalab 2023</a></span>
+          <span className="footer__text">Trótula promotion</span>
         </footer>
     </div>
   );

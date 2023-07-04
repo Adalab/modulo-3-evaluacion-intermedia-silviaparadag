@@ -1,29 +1,30 @@
+@import '../core/variables';
+@import '../core/mixins';
+
 .main {
+    background: $gradient-bgd;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &__search {
-        width: 100vw;
-        background: $gradient-bgd;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-
-    &__addquotes {
-        width: 100vw;
-        padding: 20px;
-        background: $gradient-bgd;
-    }
+    padding: 30px;
 }
 
 .quotes {
-    background: $gradient-bgd2;
-    padding: 10px;
+
+    padding: 30px 10px;
 
     &__list {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        flex-wrap: wrap;
+        gap: 10px;
+
+        @include Tablet() {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
     }
 
     &__elem {
@@ -33,6 +34,11 @@
         list-style: none;
         border-radius: 12px;
         border: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
         background-color: $color-primary2;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         color: #fff;
@@ -54,7 +60,21 @@
 
 .search {
     padding: 30px;
-    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #ffffff5c;
+
+
+
+    @include Tablet() {
+        display: flex;
+        flex-direction: row;
+    }
 
     &__label {
         padding: 15px;
@@ -62,17 +82,36 @@
     }
 
     &__input {
+        width: 250px;
+        border-radius: 8px;
         color: $color-primary2;
         font-size: 12px;
         padding: 5px;
         border: none;
+        font-style: italic;
+
+        &:hover {
+            color: $color-secondary;
+            font-weight: 700;
+            border: $color-primary;
+            background-color: $color-primary2;
+        }
     }
 
     &__select {
+        width: 250px;
+        border-radius: 8px;
         color: $color-primary2;
         font-size: 12px;
         padding: 5px;
         border: none;
+
+        &:hover {
+            color: $color-secondary3;
+            font-weight: 700;
+            border: $color-primary;
+            background-color: $color-primary2;
+        }
     }
 }
 
@@ -80,11 +119,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    border-radius: 30px;
+    background-color: #ffffff5c;
+    padding: 10px;
+
+
+    @include Tablet() {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
 
     &__title {
         color: $color-primary2;
         font-family: $font-secondary3;
+        font-size: 1.42rem;
     }
 
     &__label {
@@ -94,22 +144,40 @@
     }
 
     &__input {
+        width: 250px;
+        border-radius: 8px;
         color: $color-primary2;
         font-size: 10px;
         padding: 5px;
         border: none;
-        margin: 5px;
+        font-style: italic;
+
+        &:hover {
+            color: $color-secondary3;
+            font-weight: 700;
+            border: $color-primary;
+            background-color: $color-secondary2;
+        }
     }
 
     &__btn {
-        background: $color-secondary;
+        margin: 1ch;
+        background: $color-secondary3;
         color: $color-primary2 ;
         padding: 10px;
-        border-radius: 10px;
+        height: 50px;
+        border-radius: 25px;
         border: none;
         font-family: $font-main;
-        font-size: 12px;
+        font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
+
+        &:hover {
+            color: $color-primary2;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px $color-secondary2;
+            transition: all 0.2s ease;
+        }
     }
 }

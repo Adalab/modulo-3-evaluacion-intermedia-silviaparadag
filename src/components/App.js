@@ -162,7 +162,7 @@ function App() {
             rel="noreferrer"
             className="footer__text--link"
           >
-            © Silvia Parada
+            Silvia Parada
           </a>
         </span>
         <span className="footer__text">2023</span>

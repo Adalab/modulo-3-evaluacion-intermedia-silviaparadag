@@ -1,12 +1,11 @@
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+![friends-searcher](https://github.com/silviaparadag/module-3-intermediate-evaluation/assets/130361802/4a41f948-5206-4d87-8d80-36b80a355e7f)
 
-# Module 3 | Promo T: Individual exercise Intermediate evaluation
 
-The intermediate exercise of module 3 has the following main objectives:
+# "Friends" quotes searcher
+The exercise has the following main objectives:
 - Create a web browser with quotes from Friends characters.
 - Filter and search options for an easy location of quotes and characters.
 - A section for add new quotes.
-
 
 This browser has a search engine to find your favorite quotes, and you can also filter by character
 
@@ -23,10 +22,12 @@ This browser has a search engine to find your favorite quotes, and you can also 
 
 &nbsp;
 ## Tools ⚒️
-
-- `HTML, CSS, Saas, JavaScript, React Framework`
+- `HTML`
+- `CSS, Saas`
+- `JavaScript`
+- `React`
 - `Visual Studio Code`
-- `React Starter Kit`
+- `React`
 - `GitHub`
 - `GitHub Pages`
 
@@ -38,7 +39,16 @@ This browser has a search engine to find your favorite quotes, and you can also 
 
 &nbsp;
 
-*"Joey doesn’t share food"* Joey
+*"Joey doesn’t share food".* 
+Joey
+
+
+&nbsp;
+
+
+Module 3: Individual exercise Intermediate evaluation
+
+&nbsp;
 
 © Adalab 2023 | Trótula Promotion
 
